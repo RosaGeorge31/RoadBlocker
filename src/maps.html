@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title> Maps | RoadBlocked
+    </title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/homepage.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/mappage.css" />
+    <link rel=icon href="../images/pushpin.png" type="image/png">
+    
+    <script type='text/javascript'
+            src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=[Aok77W6veJ7IHNM_lCMZqmfV-r82f07hTxaRWaYR1byZgbSrzZcdzxDUynbNEMVC]' 
+            async defer>
+    </script>
+    
+    <script type='text/javascript'>
+
+    function changeVal(slideID,svalID)
+    {
+        var val=document.getElementById(slideID).value;
+        document.getElementById(svalID).value=val;
+    }
+    function GetMap()
+    {
+    
+        map = new Microsoft.Maps.Map('#myMap', {
+            center: new Microsoft.Maps.Location(17.42565,78.4582 ),
+            mapTypeId: Microsoft.Maps.MapTypeId.road,
+            zoom: 16,
+            credentials: 'Aok77W6veJ7IHNM_lCMZqmfV-r82f07hTxaRWaYR1byZgbSrzZcdzxDUynbNEMVC',
+            disablePanning:true, maxZoom:16,minZoom:16,showZoomButtons:false,showScalebar:false,showMapTypeSelector	:false,
+            showLocateMeButton:false,showTermsLink:false,enableClickableLogo:false
+        });
+        var center = map.getCenter();
+
+        //Create custom Pushpin
+        var pin = new Microsoft.Maps.Pushpin(center, {
+            icon: '../images/map.ico',
+            anchor: new Microsoft.Maps.Point(50,100),
+            visible: true
+        });
+        map.entities.push(pin);
+    }
+
+    </script>
+</head>
+
+<body onload="getMap();">
+        <div class="home_head">
+                <div class="card" id="head">
+                    <a href="homepage.html">
+                        <img class="logo" src="../images/logo.jpg">
+                                       
+                    <h3 id="head">RoadBlocked</h3>
+                    </a> 
+                    <a id="gh" href="https://github.com/RosaGeorge31/RoadBlocker">
+                        <img class="gh" src="../images/GitHub-Mark-64px.png">
+                    </a>                
+                </div>
+        </div>
+        <div class="home_body">
+            <div class="card" id="map_main">
+                    <div id="myMap"></div>    
+            </div>        
+            <div class="card" id="control_card">
+                <div id="find">
+                    <p>Find Me</p>
+                </div>
+                <div class="custom-select" style="width:200px;">
+                    <select id="location">
+                        <option value="l1">Location 1</option>
+                        <option value="l2">Location 2</option>
+                        <option value="l3">Location 3</option>
+                        <option value="l4">Location 4</option>
+                    </select>
+                </div>
+                <div class="range-slider" >
+                        <input id="slider1" onchange="changeVal('slider1','s1val')" class="range-slider__range" type="range" value="0" min="0" max="500">
+                </div>
+                <p>Rainfall (in mm): </p>
+                <input type="text" disabled value="" id="s1val" placeholder="-">
+                <div class="range-slider">
+                        <input id="slider2" onchange="changeVal('slider2','s2val')"class="range-slider__range" type="range" value="1" min="1" max="6">
+                </div>
+                <p>Hours of Rainfall: </p>
+                <input type="text" disabled value="" id="s2val" placeholder="-">
+
+            </div>  
+        </div>    
+        <div class="home_footer">
+            <p id="foot">Created for Microsoft codefundo++ 2018<br>
+            <a id="foot" href="https://codefundo.io/">codefundo.io/
+            </a>
+            </p>
+        </div>
+</body>
+</html>

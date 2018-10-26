@@ -1,0 +1,189 @@
+body{
+    overflow: auto;
+}
+div.home_head
+{
+    height:auto;
+    margin:0px;
+    z-index: 1;
+    display: block;
+    position: sticky;
+    top:0px;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.card#head{
+    height:100px;
+    border-radius: 10px;
+    padding-right: 30px;
+    padding-left:30px;
+    display: block;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.logo{
+    position: relative;
+    margin:0px;
+    display: inline-block;
+    height:70px ;
+    width: 70px;
+    top:10px;
+}
+
+h3#head{
+    bottom:15px;
+}
+h3#head,p#p4{
+    position: relative;
+    display: inline-block;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 40px;
+    color:#00182E;
+}
+a#gh{
+    position: relative;
+    margin-left:auto;
+    display: inline-block;
+    bottom:15px;
+    left: 840px;
+
+}
+
+img.gh{
+    height:30px ;
+    width: 30px;
+}
+
+div.home_body
+{
+    display: block;
+    border-radius: 10px;    
+    background-color: white;
+    position: relative;
+    width: auto;
+    height: auto;
+    padding:30px;
+    align-content: ;
+}
+
+.card#body_card,.card#disimage{
+    width:40%;
+    height: auto;
+    text-align: center;
+    display: inline-block;
+    position: relative;
+    border-radius: 10px;
+    padding:0px;
+    margin:10px;
+}
+
+.card#body_card{
+    top:-80px;
+    margin-left: 70px;
+}
+.card#disimage{
+    width: 45%;
+}
+.card#bttn{
+    width:auto;
+    position: relative;
+    display: block;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+    margin-left:60px;
+    margin-right:60px;
+    margin:30px;
+    
+}
+
+.card#bttn:hover{
+    background:rgb(159, 184, 207);
+}
+
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #00182E;
+    margin:0px;
+}
+
+p#body_text{
+    display: block;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 50px;
+    color:#00182E;
+    text-align: center;
+    padding:0px;
+    margin-top:10px;
+    margin-bottom:10px;
+}
+
+p#p1{
+    font-size: 20px;
+    text-align: center;
+    margin-bottom:10px;
+
+}
+p#p2,p#p3{
+    text-align: center;
+    margin-bottom:10px;
+
+}
+
+p#dis{
+    padding:5px;
+    margin-top:50px;
+    font-size: 10px;
+    font-style: oblique;
+    text-align: justify;
+}
+
+img#dimg{
+    height:400px;
+    width:500px;
+    margin:10px;
+}
+div.home_footer{
+    display: block;
+    position: relative;
+    bottom:0px;
+    padding:5px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: #00182E;
+    color:#afb5bf;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 10px 20px 0 rgba(15, 14, 14, 0.2);
+    transition: 0.3s;
+    font-size: 10px;
+
+}
+
+
+p#foot,a#foot{
+    color:#afb5bf;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 10px;
+
+}
+
+/*card class*/
+.card {
+    background-color:#FFFFFF;
+    box-shadow: 2px 10px 20px 2px rgba(15, 14, 14, 0.2);
+    transition: 0.3s;
+    
+}
+.card:hover {
+    box-shadow: 5px 8px 16px 5px rgba(12, 12, 12, 0.2);
+}
+
+
+
+
+
+
+
